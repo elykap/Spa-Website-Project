@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Golden Dragon Spa: Request a Quote</title>
+  <style>
+    @import url(spa-styles-rwd.css);
+  </style>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Golden Dragon Spa</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="spa.html">Home</a>
+        <li class="nav-item">
+          <a class="nav-link" href="spamenu.html">Menu</a>
+        <li class="nav-item">
+          <a class="nav-link" href="specials.html">Specials</a>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        <li class="nav-item">
+          <a class="nav-link" href="signaturearticle.html">News</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="form.html">Reservations</a>
+        <li class="nav-item">
+          <a class="nav-link" href="offertable.html">Upcoming Offers</a>
+      </ul>
+    </div>
+  </nav>
+<header>
+<h1>Golden Harbor Spa | Request a Quote</h1>
+
+<p>Experience the ultimate relaxation and rejuvenation at Golden Dragon Spa. Request a quote for your customized spa experience, and we'll provide you with all the information you need.</p>
+
+<form action="process_form.php" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+
+<fieldset>
+  <legend>Your Information</legend>
+  <ul>
+    <li><label for="form-name">Name:</label> <input type="text" name="customername" id="form-name"></li>
+    <li><label for="form-email">Email:</label> <input type="email" name="email" id="form-email"></li>
+    <li><label for="form-phone">Phone Number:</label> <input type="tel" name="phone" id="form-phone"></li>
+    <li><label for="form-preferences">Special Preferences or Comments:</label></li>
+    <li><textarea name="preferences" rows="4" cols="60" id="form-preferences" placeholder="Share any special preferences or comments"></textarea></li>
+  </ul>
+</fieldset>
+
+<h2>Your Spa Experience:</h2>
+</header>
+
+<fieldset>
+  <legend>Spa Preferences</legend>
+  <fieldset>
+    <legend>Service Type <em>(Choose one)</em>:</legend>
+    <ul>
+      <li><label><input type="radio" name="service-type" value="massage"> Massage</label></li>
+      <li><label><input type="radio" name="service-type" value="facial"> Facial</label></li>
+      <li><label><input type="radio" name="service-type" value="body-treatment"> Body Treatment</label></li>
+      <li><label><input type="radio" name="service-type" value="aromatherapy"> Aromatherapy</label></li>
+    </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>Treatment Enhancements <em>(Choose as many as you want)</em></legend>
+    <ul>
+      <li><label><input type="checkbox" name="enhancements[]" value="hot-stones" checked> Hot Stones</label></li>
+      <li><label><input type="checkbox" name="enhancements[]" value="aromatherapy"> Aromatherapy</label></li>
+      <li><label><input type="checkbox" name="enhancements[]" value="exfoliation"> Exfoliation</label></li>
+      <li><label><input type="checkbox" name="enhancements[]" value="scalp-massage"> Scalp Massage</label></li>
+    </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>Number of Guests</legend>
+    <p>How many guests:
+      <select name="guests" size="1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+      </select>
+    </p>
+  </fieldset>
+
+</fieldset>
+
+<p><input type="submit" value="Request a Quote">
+<input type="reset"></p>
+
+</form>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {window.location='thank_you.html';}"></iframe>
+<footer>
+  <p><small>content copyright &copy; 2023, Golden Dragon Spa.</small></p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
